@@ -4,8 +4,6 @@ import { MenuCarousel } from './ui/framer-carousel'
 import useIsMobile from '@/hooks/useIsMobile'
 import { restaurant } from '@/config/restaurant'
 
-const tabs = Object.keys(restaurant.menu) as (keyof typeof restaurant.menu)[]
-
 export default function MenuSection() {
   const isMobile = useIsMobile()
   return (
