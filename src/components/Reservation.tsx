@@ -6,7 +6,7 @@ import { restaurant } from '@/config/restaurant'
 
 export default function Reservation() {
   const isMobile = useIsMobile()
-  const [form, setForm] = useState({ firstName: '', lastName: '', date: '', time: '19:00', guests: '2', phone: '', email: '', notes: '' })
+  const [form, setForm] = useState({ firstName: '', lastName: '', date: '', time: '19:00', guests: '2', phone: '', notes: '' })
   const onChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => setForm({ ...form, [e.target.name]: e.target.value })
 
   const sendToWhatsApp = () => {
@@ -19,7 +19,6 @@ export default function Reservation() {
       form.time && `Laiks: ${form.time}`,
       form.guests && `Viesi: ${form.guests}`,
       form.phone && `Telefons: ${form.phone}`,
-      form.email && `E-pasts: ${form.email}`,
       form.notes && `Piezīmes: ${form.notes}`,
     ].filter(Boolean).join('\n')
     window.open(`https://wa.me/${waNumber}?text=${encodeURIComponent(lines)}`, '_blank')

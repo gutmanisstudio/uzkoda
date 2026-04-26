@@ -21,6 +21,9 @@ export default function MenuSection() {
             <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.9rem', fontWeight: 300, color: restaurant.colors.gray, marginTop: '0.5rem' }}>
               Mūsu signatūras produkti — uzkodas, banketi un piramīdas.
             </p>
+            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.78rem', fontWeight: 500, letterSpacing: '0.08em', color: restaurant.colors.primary, marginTop: '0.6rem' }}>
+              Cenas pēc pieprasījuma · Contact us for pricing
+            </p>
           </div>
         </FadeIn>
 

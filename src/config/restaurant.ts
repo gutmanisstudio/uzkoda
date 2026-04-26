@@ -5,10 +5,9 @@ export const restaurant = {
   highlight1: 'Tematiskie pasākumi · Banketu apkalpošana',
   highlight2: 'Sekojiet @uzkoda.info',
   phone: '+371 25911808',
-  email: '',
-  address: '__TODO_ADDRESS__',
+  address: 'Rīga, Zaķusalas krastmala 33',
   instagram: 'https://instagram.com/uzkoda.info',
-  mapsLink: 'https://maps.google.com/?q=__TODO_ADDRESS__',
+  mapsLink: 'https://maps.google.com/?q=R%C4%ABga%2C+Za%C4%B7usalas+krastmala+33',
   hours: {
     weekday: 'Pirmdiena–Piektdiena: pēc pieprasījuma',
     friday: 'Sestdiena–Svētdiena: pasākumi un banketi',

@@ -74,7 +74,7 @@ export default function Contact() {
           <FadeIn delay={0.3} style={{ gridColumn: '1 / -1' }}>
             <div style={{ borderRadius: '16px', overflow: 'hidden', marginTop: '2rem', border: `1px solid rgba(201,168,74,0.12)` }}>
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2179.8!2d23.7709!3d56.9677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eecfe3b1234567%3A0xabcdef123456789!2sJomas%20iela%2025%2C%20J%C5%ABrmala!5e0!3m2!1slv!2slv!4v1234567890123"
+                src="https://www.google.com/maps?q=R%C4%ABga%2C+Za%C4%B7usalas+krastmala+33&output=embed"
                 width="100%"
                 height={isMobile ? '280' : '400'}
                 style={{ border: 0, display: 'block' }}

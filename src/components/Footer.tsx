@@ -22,7 +22,7 @@ export default function Footer() {
         {[
           { title: 'Navigācija', items: ['Par mums', 'Ēdienkarte', 'Galerija', 'Pasākumi', 'Rezervācija'] },
           { title: 'Darba laiks', items: [restaurant.hours.weekday, restaurant.hours.friday, restaurant.hours.sunday] },
-          { title: 'Kontakti', items: [...restaurant.address.split(', '), restaurant.phone, restaurant.email].filter(Boolean) },
+          { title: 'Kontakti', items: [...restaurant.address.split(', '), restaurant.phone].filter(Boolean) },
         ].map(col => (
           <div key={col.title}>
             <h4 style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.62rem', fontWeight: 700, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.25)', marginBottom: '1.2rem' }}>{col.title}</h4>
