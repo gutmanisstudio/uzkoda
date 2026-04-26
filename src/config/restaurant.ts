@@ -4,7 +4,7 @@ export const restaurant = {
   description: 'Uzkodu piramīdas, banketi un pusdienotava. Sirsnīga ēdienreize jebkuram pasākumam.',
   highlight1: 'Tematiskie pasākumi · Banketu apkalpošana',
   highlight2: 'Sekojiet @uzkoda.info',
-  phone: '__TODO_PHONE__',
+  phone: '+371 25911808',
   email: '',
   address: '__TODO_ADDRESS__',
   instagram: 'https://instagram.com/uzkoda.info',
