@@ -3,8 +3,13 @@ import FadeIn from './FadeIn'
 import useIsMobile from '@/hooks/useIsMobile'
 import { restaurant } from '@/config/restaurant'
 
-// Drop theme-party gallery images into /public/gallery/ and list them here.
-const galleryImages: string[] = []
+const galleryImages: string[] = [
+  '/themeparty/SnapInsta.to_657580117_17883631182475098_8621200226766178350_n.jpg',
+  '/themeparty/SnapInsta.to_657599959_17883631152475098_5429623297120077564_n.jpg',
+  '/themeparty/SnapInsta.to_658054053_17883631191475098_1247983451395943131_n.jpg',
+  '/themeparty/SnapInsta.to_658146077_17883631179475098_2118229299857717087_n.jpg',
+  '/themeparty/SnapInsta.to_658796329_17883631164475098_4930765817885935931_n.jpg',
+]
 
 export default function KidsRoom() {
   const isMobile = useIsMobile()
