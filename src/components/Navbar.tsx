@@ -26,7 +26,7 @@ export default function Navbar() {
       borderBottom: `1px solid rgba(107,58,42,0.2)`,
     }}>
       <a href="#home" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
-        <img src="/images/logo123.png" alt={restaurant.name} style={{ height: '44px', objectFit: 'contain' }} onError={e => (e.target as HTMLImageElement).style.display = 'none'} />
+        <img src="/images/logo.jpg" alt={restaurant.name} style={{ height: '44px', objectFit: 'contain', borderRadius: '8px' }} onError={e => (e.target as HTMLImageElement).style.display = 'none'} />
       </a>
 
       <ul style={{ display: isMobile ? 'none' : 'flex', gap: '2rem', listStyle: 'none' }}>

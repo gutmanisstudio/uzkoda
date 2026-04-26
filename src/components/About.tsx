@@ -1,69 +1,74 @@
 'use client'
 import FadeIn from './FadeIn'
+import useIsMobile from '@/hooks/useIsMobile'
 import { restaurant } from '@/config/restaurant'
 
 const features = [
   {
-    title: 'Rezervēt galdu vai zvanīt',
-    desc: 'Rezervējiet iepriekš vai vienkārši ienāciet — mēs parūpēsimies par visu.',
-    svg: <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6B3A2A" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+    title: 'Signatūras piramīda',
+    desc: 'Mūsu vizītkarte — kārtots uzkodu tornis, kas piesaista skatienus un patīk pat izvēlīgākajiem viesiem.',
+    svg: <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6B3A2A" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 22 22 2 22"/></svg>
   },
   {
-    title: 'Gatavots svaigi katru dienu',
-    desc: 'Katrs ēdiens pagatavots pasūtījuma brīdī. Nekādu kompromisu.',
+    title: 'Svaigi produkti',
+    desc: 'Katra kārta — sezonas un vietējas izejvielas, kārtotas tieši pirms pasniegšanas.',
     svg: <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6B3A2A" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
   },
   {
-    title: 'Privāti pasākumi',
-    desc: 'Plānojat ko īpašu? Mēs uzņemam grupas no 10 līdz 120 viesiem.',
+    title: 'Pielāgots pasākumam',
+    desc: 'Izvēlamies sastāvu un izmēru atbilstoši viesu skaitam — no 10 līdz 200+.',
     svg: <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6B3A2A" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
   },
   {
-    title: 'Konditoreja',
-    desc: 'Armēņu konditorejas izstrādājumi. Zvaniet: +371 22300587',
-    svg: <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6B3A2A" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+    title: 'Piegādājam un uzstādām',
+    desc: 'Atvedam, sakārtojam un nodrošinām, ka piramīda izskatās ideāli visu pasākumu.',
+    svg: <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6B3A2A" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
   },
 ]
 
 export default function About() {
+  const isMobile = useIsMobile()
   return (
-    <section id="about" style={{ background: '#FDFAF5', padding: '7rem 4rem' }}>
-      <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'center' }}>
+    <section id="about" style={{ background: restaurant.colors.bg, padding: isMobile ? '3rem 1.5rem' : '7rem 4rem' }}>
+      <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: isMobile ? '2rem' : '5rem', alignItems: 'center' }}>
 
-        {/* LEFT — video card, no stray text or broken img */}
+        {/* LEFT — food pyramid video */}
         <FadeIn direction="left">
           <div style={{
             position: 'relative',
             borderRadius: '20px',
             overflow: 'hidden',
             aspectRatio: '4/5',
-            background: '#2C1810',
+            background: restaurant.colors.text,
             boxShadow: '0 30px 80px rgba(107,58,42,0.15)',
           }}>
             <video
               autoPlay loop muted playsInline
               style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 1 }}
             >
-              <source src="/videos/interior.mp4" type="video/mp4" />
+              <source src={restaurant.aboutVideo} type="video/mp4" />
             </video>
-            <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '4px', background: '#6B3A2A', zIndex: 3 }} />
+            <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '4px', background: restaurant.colors.primary, zIndex: 3 }} />
+            <div style={{ position: 'absolute', top: '1.5rem', left: '1.5rem', background: 'rgba(107,58,42,0.9)', backdropFilter: 'blur(8px)', padding: '0.5rem 1rem', borderRadius: '999px', zIndex: 3 }}>
+              <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase', color: '#FDFAF5' }}>Mūsu vizītkarte</p>
+            </div>
           </div>
         </FadeIn>
 
         {/* RIGHT — text */}
         <div>
           <FadeIn delay={0.1}>
-            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.72rem', fontWeight: 600, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#6B3A2A', marginBottom: '1rem' }}>
+            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.72rem', fontWeight: 600, letterSpacing: '0.2em', textTransform: 'uppercase', color: restaurant.colors.primary, marginBottom: '1rem' }}>
               Par mums
             </p>
-            <h2 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 'clamp(2.5rem, 4vw, 4rem)', letterSpacing: '0.08em', color: '#2C1810', lineHeight: 1 }}>
-              YEREVAN
+            <h2 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 'clamp(2.5rem, 4vw, 4rem)', letterSpacing: '0.08em', color: restaurant.colors.text, lineHeight: 1 }}>
+              UZKODU
             </h2>
-            <h2 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 'clamp(2.5rem, 4vw, 4rem)', letterSpacing: '0.08em', color: '#6B3A2A', lineHeight: 1, marginBottom: '1.5rem' }}>
-              PANDOK
+            <h2 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 'clamp(2.5rem, 4vw, 4rem)', letterSpacing: '0.08em', color: restaurant.colors.primary, lineHeight: 1, marginBottom: '1.5rem' }}>
+              PIRAMĪDA
             </h2>
-            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.92rem', fontWeight: 300, color: '#8C7B6B', lineHeight: 1.8, marginBottom: '2rem' }}>
-              Autentiska armēņu virtuve Jūrmalā. Mājīga atmosfēra, svaigas izejvielas un sirsnīga apkalpošana — tieši tā, kā mājas.
+            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.92rem', fontWeight: 300, color: restaurant.colors.gray, lineHeight: 1.8, marginBottom: '2rem' }}>
+              Uzkodu piramīda ir mūsu signatūras piedāvājums — kārtots ēdienu tornis no svaigām, sezonālām uzkodām, kas pasākumam piešķir gan vizuālu, gan garšu efektu. Pielāgojam sastāvu jūsu pasākumam un viesu skaitam.
             </p>
           </FadeIn>
 
@@ -74,8 +79,8 @@ export default function About() {
                   {item.svg}
                 </div>
                 <div>
-                  <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#2C1810', marginBottom: '0.2rem' }}>{item.title}</p>
-                  <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.85rem', fontWeight: 300, color: '#8C7B6B', lineHeight: 1.6 }}>{item.desc}</p>
+                  <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: restaurant.colors.text, marginBottom: '0.2rem' }}>{item.title}</p>
+                  <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.85rem', fontWeight: 300, color: restaurant.colors.gray, lineHeight: 1.6 }}>{item.desc}</p>
                 </div>
               </div>
             </FadeIn>
@@ -84,12 +89,12 @@ export default function About() {
           <FadeIn delay={0.65}>
             <a
               href="#reserve"
-              style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginTop: '0.8rem', background: '#6B3A2A', color: '#FDFAF5', fontFamily: "'DM Sans', sans-serif", fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', padding: '0.85rem 2rem', borderRadius: '999px', transition: 'all 0.2s', alignSelf: 'flex-start' }}
-              onMouseEnter={e => { e.currentTarget.style.background = '#4A2418'; e.currentTarget.style.transform = 'scale(1.04)' }}
-              onMouseLeave={e => { e.currentTarget.style.background = '#6B3A2A'; e.currentTarget.style.transform = 'scale(1)' }}
+              style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginTop: '0.8rem', background: restaurant.colors.primary, color: '#FDFAF5', fontFamily: "'DM Sans', sans-serif", fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', padding: '0.85rem 2rem', borderRadius: '999px', transition: 'all 0.2s', textDecoration: 'none' }}
+              onMouseEnter={e => { e.currentTarget.style.background = restaurant.colors.primaryDark; e.currentTarget.style.transform = 'scale(1.04)' }}
+              onMouseLeave={e => { e.currentTarget.style.background = restaurant.colors.primary; e.currentTarget.style.transform = 'scale(1)' }}
             >
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-              Uzzināt vairāk
+              Pasūtīt piramīdu
             </a>
           </FadeIn>
         </div>

@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Yerevan Pandok — Armēņu virtuve Jūrmalā',
-  description: 'Autentiska armēņu ēdienkarte. Mājīga atmosfēra pie jūras.',
+  title: 'Uzkoda — Uzkodu piramīdas, banketi un pasākumi',
+  description: 'Uzkodu piramīdas, banketi un pusdienotava. Sirsnīga ēdienreize jebkuram pasākumam.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

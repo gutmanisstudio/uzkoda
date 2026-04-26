@@ -19,7 +19,7 @@ export default function MenuSection() {
               OUR <span style={{ color: restaurant.colors.primary }}>MENU</span>
             </h2>
             <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.9rem', fontWeight: 300, color: restaurant.colors.gray, marginTop: '0.5rem' }}>
-              Autentiska armēņu virtuve. Gatavots katru dienu no svaigiem produktiem.
+              Mūsu signatūras produkti — uzkodas, banketi un piramīdas.
             </p>
           </div>
         </FadeIn>
@@ -55,8 +55,8 @@ export default function MenuSection() {
         {/* Full menu carousel */}
         <FadeIn delay={0.2}>
           <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.72rem', fontWeight: 600, letterSpacing: '0.2em', textTransform: 'uppercase', color: restaurant.colors.primary, marginBottom: '0.5rem' }}>Pilnā ēdienkarte</p>
-            <h3 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 'clamp(2rem, 3vw, 3rem)', letterSpacing: '0.08em', color: restaurant.colors.text }}>BROWSE OUR FULL MENU</h3>
+            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.72rem', fontWeight: 600, letterSpacing: '0.2em', textTransform: 'uppercase', color: restaurant.colors.primary, marginBottom: '0.5rem' }}>Mūsu darbi</p>
+            <h3 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 'clamp(2rem, 3vw, 3rem)', letterSpacing: '0.08em', color: restaurant.colors.text }}>APSKATI MŪSU PRODUKTUS</h3>
           </div>
           <MenuCarousel />
         </FadeIn>
