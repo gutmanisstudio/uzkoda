@@ -24,7 +24,7 @@ export function MenuCarousel() {
       <div style={{ position: 'relative', overflow: 'hidden', borderRadius: '20px' }} ref={containerRef}>
         <motion.div style={{ display: 'flex', x }}>
           {images.map((src, i) => (
-            <div key={i} style={{ flexShrink: 0, width: '100%', height: isMobile ? '400px' : '700px', background: '#F5EFE4' }}>
+            <div key={i} style={{ flexShrink: 0, width: '100%', height: isMobile ? '400px' : '700px', background: restaurant.colors.bgAlt }}>
               <img
                 src={src}
                 alt={`Menu page ${i + 1}`}
