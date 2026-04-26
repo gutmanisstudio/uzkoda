@@ -74,7 +74,7 @@ export default function Contact() {
           <FadeIn delay={0.3} style={{ gridColumn: '1 / -1' }}>
             <div style={{ borderRadius: '16px', overflow: 'hidden', marginTop: '2rem', border: `1px solid rgba(201,168,74,0.12)` }}>
               <iframe
-                src="https://www.google.com/maps?q=R%C4%ABga%2C+Za%C4%B7usalas+krastmala+33&output=embed"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=24.1180%2C56.9320%2C24.1320%2C56.9410&layer=mapnik&marker=56.9355%2C24.1235"
                 width="100%"
                 height={isMobile ? '280' : '400'}
                 style={{ border: 0, display: 'block' }}

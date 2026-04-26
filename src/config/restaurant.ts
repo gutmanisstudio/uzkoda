@@ -28,8 +28,8 @@ export const restaurant = {
   menu: {
     Mains: [
       { name: 'Produkts 1', desc: '__TODO_PRODUCT_1_DESC__', price: '', img: '/menu/product1.jpg' },
-      { name: 'Produkts 2', desc: '__TODO_PRODUCT_2_DESC__', price: '', img: '/menu/product2.jpg' },
-      { name: 'Produkts 3', desc: '__TODO_PRODUCT_3_DESC__', price: '', img: '/menu/product3.jpg' },
+      { name: 'Profiterole ar pikantu parmezāna krēmu, piri-piri marinētu piparu, svaigiem dīgstiem un zelta putekļiem', desc: 'Gaisīgs kumoss ar maigi pikantu, krēmīgu siera pildījumu. Garšas akcentu piešķir piri-piri marinēti pipari, svaigie dīgsti ienes vieglu kraukšķīgumu, bet smalki zelta putekļi piešķir izsmalcinātu un svinīgu noskaņu.', price: '', img: '/menu/product2.jpg' },
+      { name: 'Groziņkanapē ar garnelēm čili glazūrā ar gaisīgo masago ikru krēmu', desc: 'Groziņkanapē – sulīgas garneles čili glazūrā, grezni pildītas ar gaisīgo masago ikru krēmu, kas katram kumosam piešķir vieglu jūras aromātu un izsmalcinātu pieskārienu.', price: '', img: '/menu/product3.jpg' },
     ],
   },
   menuImages: [
