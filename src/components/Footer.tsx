@@ -28,7 +28,7 @@ export default function Footer() {
           {[
             { title: 'Navigācija', items: navLinks },
             { title: 'Darba laiks', items: [restaurant.hours.weekday, restaurant.hours.friday, restaurant.hours.sunday].map(t => ({ label: t, href: null as string | null })) },
-            { title: 'Kontakti', items: [...restaurant.address.split(', ').map(a => ({ label: a, href: restaurant.mapsLink as string | null })), { label: restaurant.phone, href: `tel:${restaurant.phone}` as string | null }] },
+            { title: 'Kontakti', items: [...restaurant.address.split(', ').map(a => ({ label: a, href: restaurant.mapsLink as string | null })), { label: restaurant.phone, href: `tel:${restaurant.phone.replace(/\s/g, '')}` as string | null }] },
           ].map(col => (
             <div key={col.title}>
               <h4 style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.62rem', fontWeight: 700, letterSpacing: '0.22em', textTransform: 'uppercase', color: restaurant.colors.primary, marginBottom: '1rem' }}>{col.title}</h4>

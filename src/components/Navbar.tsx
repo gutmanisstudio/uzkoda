@@ -45,7 +45,7 @@ export default function Navbar() {
       </ul>
 
       <div style={{ display: 'flex', gap: isMobile ? '0.5rem' : '1rem', alignItems: 'center' }}>
-        <a href={`tel:${restaurant.phone}`} aria-label="Zvanīt" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontFamily: "'DM Sans', sans-serif", fontSize: '0.72rem', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.7)', textDecoration: 'none', transition: 'color 0.2s', border: isMobile ? `1px solid rgba(255,255,255,0.18)` : 'none', padding: isMobile ? '0.5rem' : 0, borderRadius: isMobile ? '50%' : 0, width: isMobile ? '36px' : 'auto', height: isMobile ? '36px' : 'auto', justifyContent: 'center' }}
+        <a href={`tel:${restaurant.phone.replace(/\s/g, '')}`} aria-label="Zvanīt" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontFamily: "'DM Sans', sans-serif", fontSize: '0.72rem', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.7)', textDecoration: 'none', transition: 'color 0.2s', border: isMobile ? `1px solid rgba(255,255,255,0.18)` : 'none', padding: isMobile ? '0.5rem' : 0, borderRadius: isMobile ? '50%' : 0, width: isMobile ? '36px' : 'auto', height: isMobile ? '36px' : 'auto', justifyContent: 'center' }}
           onMouseEnter={e => e.currentTarget.style.color = restaurant.colors.primary}
           onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.7)'}
         >
