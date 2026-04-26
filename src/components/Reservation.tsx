@@ -47,7 +47,7 @@ export default function Reservation() {
       </FadeIn>
 
       <FadeIn direction="right" delay={0.1}>
-        <div style={{ background: restaurant.colors.bg, padding: '3rem', borderRadius: '16px' }}>
+        <div style={{ background: restaurant.colors.bg, padding: isMobile ? '1.75rem 1.25rem' : '3rem', borderRadius: '16px' }}>
           <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.65rem', fontWeight: 600, letterSpacing: '0.2em', textTransform: 'uppercase', color: restaurant.colors.primary, marginBottom: '0.4rem' }}>Rezervēt galdu</p>
           <h3 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: '2.2rem', letterSpacing: '0.08em', color: restaurant.colors.text, marginBottom: '2rem' }}>Rezervējiet vakaru</h3>
           <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: '1rem', marginBottom: '1rem' }}>

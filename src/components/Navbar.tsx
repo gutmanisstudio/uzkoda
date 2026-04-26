@@ -19,14 +19,14 @@ export default function Navbar() {
     <nav style={{
       position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000,
       display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-      padding: '0 3rem',
-      height: '70px',
+      padding: isMobile ? '0 1rem' : '0 3rem',
+      height: isMobile ? '60px' : '70px',
       background: 'rgba(44,24,16,0.92)',
       backdropFilter: 'blur(16px)',
       borderBottom: `1px solid rgba(201,168,74,0.2)`,
     }}>
       <a href="#home" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
-        <img src="/images/logo.jpg" alt={restaurant.name} style={{ height: '44px', objectFit: 'contain', borderRadius: '8px' }} onError={e => (e.target as HTMLImageElement).style.display = 'none'} />
+        <img src="/images/logo.jpg" alt={restaurant.name} style={{ height: isMobile ? '36px' : '44px', objectFit: 'contain', borderRadius: '8px' }} onError={e => (e.target as HTMLImageElement).style.display = 'none'} />
       </a>
 
       <ul style={{ display: isMobile ? 'none' : 'flex', gap: '2rem', listStyle: 'none' }}>
@@ -44,22 +44,22 @@ export default function Navbar() {
         ))}
       </ul>
 
-      <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-        <a href={`tel:${restaurant.phone}`} style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontFamily: "'DM Sans', sans-serif", fontSize: '0.72rem', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.5)', textDecoration: 'none', transition: 'color 0.2s' }}
+      <div style={{ display: 'flex', gap: isMobile ? '0.5rem' : '1rem', alignItems: 'center' }}>
+        <a href={`tel:${restaurant.phone}`} aria-label="Zvanīt" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontFamily: "'DM Sans', sans-serif", fontSize: '0.72rem', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.7)', textDecoration: 'none', transition: 'color 0.2s', border: isMobile ? `1px solid rgba(255,255,255,0.18)` : 'none', padding: isMobile ? '0.5rem' : 0, borderRadius: isMobile ? '50%' : 0, width: isMobile ? '36px' : 'auto', height: isMobile ? '36px' : 'auto', justifyContent: 'center' }}
           onMouseEnter={e => e.currentTarget.style.color = restaurant.colors.primary}
-          onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.5)'}
+          onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.7)'}
         >
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
           </svg>
-          Zvanīt
+          {!isMobile && 'Zvanīt'}
         </a>
 
         <a href="#reserve" style={{
-          fontFamily: "'DM Sans', sans-serif", fontSize: '0.72rem', fontWeight: 700,
+          fontFamily: "'DM Sans', sans-serif", fontSize: isMobile ? '0.66rem' : '0.72rem', fontWeight: 700,
           letterSpacing: '0.1em', textTransform: 'uppercase',
           color: '#FDFAF5', background: restaurant.colors.primary,
-          padding: '0.6rem 1.5rem', borderRadius: '999px', textDecoration: 'none',
+          padding: isMobile ? '0.5rem 0.9rem' : '0.6rem 1.5rem', borderRadius: '999px', textDecoration: 'none',
           transition: 'all 0.2s', display: 'flex', alignItems: 'center', gap: '0.4rem',
         }}
           onMouseEnter={e => { e.currentTarget.style.background = restaurant.colors.primaryDark; e.currentTarget.style.transform = 'scale(1.04)' }}
