@@ -11,7 +11,7 @@ export default function Contact() {
         <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 2fr', gap: isMobile ? '2rem' : '5rem', alignItems: 'center' }}>
           <FadeIn direction="left">
             <div>
-              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', fontFamily: "'DM Sans', sans-serif", fontSize: '0.68rem', fontWeight: 600, letterSpacing: '0.15em', textTransform: 'uppercase', color: restaurant.colors.primary, background: `rgba(107,58,42,0.08)`, padding: '0.4rem 1rem', borderRadius: '999px', border: `1px solid rgba(107,58,42,0.2)`, marginBottom: '1.5rem' }}>
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', fontFamily: "'DM Sans', sans-serif", fontSize: '0.68rem', fontWeight: 600, letterSpacing: '0.15em', textTransform: 'uppercase', color: restaurant.colors.primary, background: `rgba(201,168,74,0.08)`, padding: '0.4rem 1rem', borderRadius: '999px', border: `1px solid rgba(201,168,74,0.2)`, marginBottom: '1.5rem' }}>
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke={restaurant.colors.primary} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
                 </svg>
@@ -55,10 +55,10 @@ export default function Contact() {
               },
             ].map((item, i) => (
               <FadeIn key={item.label} delay={i * 0.1}>
-                <div style={{ background: restaurant.colors.bgAlt, padding: '1.5rem', borderRadius: '16px', border: `1px solid rgba(107,58,42,0.08)`, display: 'flex', gap: '1rem', alignItems: 'flex-start', transition: 'all 0.2s' }}
-                  onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = `rgba(107,58,42,0.3)`; (e.currentTarget as HTMLElement).style.transform = 'translateY(-3px)' }}
-                  onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = `rgba(107,58,42,0.08)`; (e.currentTarget as HTMLElement).style.transform = 'translateY(0)' }}>
-                  <div style={{ width: '38px', height: '38px', borderRadius: '10px', background: `rgba(107,58,42,0.08)`, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                <div style={{ background: restaurant.colors.bgAlt, padding: '1.5rem', borderRadius: '16px', border: `1px solid rgba(201,168,74,0.08)`, display: 'flex', gap: '1rem', alignItems: 'flex-start', transition: 'all 0.2s' }}
+                  onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = `rgba(201,168,74,0.3)`; (e.currentTarget as HTMLElement).style.transform = 'translateY(-3px)' }}
+                  onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = `rgba(201,168,74,0.08)`; (e.currentTarget as HTMLElement).style.transform = 'translateY(0)' }}>
+                  <div style={{ width: '38px', height: '38px', borderRadius: '10px', background: `rgba(201,168,74,0.08)`, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                     {item.svg}
                   </div>
                   <div>
@@ -72,7 +72,7 @@ export default function Contact() {
 
           {/* Google Maps */}
           <FadeIn delay={0.3} style={{ gridColumn: '1 / -1' }}>
-            <div style={{ borderRadius: '16px', overflow: 'hidden', marginTop: '2rem', border: `1px solid rgba(107,58,42,0.12)` }}>
+            <div style={{ borderRadius: '16px', overflow: 'hidden', marginTop: '2rem', border: `1px solid rgba(201,168,74,0.12)` }}>
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2179.8!2d23.7709!3d56.9677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eecfe3b1234567%3A0xabcdef123456789!2sJomas%20iela%2025%2C%20J%C5%ABrmala!5e0!3m2!1slv!2slv!4v1234567890123"
                 width="100%"
@@ -87,7 +87,7 @@ export default function Contact() {
         </div>
       </section>
 
-      <section style={{ background: restaurant.colors.bgAlt, borderTop: `1px solid rgba(107,58,42,0.12)`, padding: isMobile ? '3rem 1.5rem' : '5rem 4rem', textAlign: 'center' }}>
+      <section style={{ background: restaurant.colors.bgAlt, borderTop: `1px solid rgba(201,168,74,0.12)`, padding: isMobile ? '3rem 1.5rem' : '5rem 4rem', textAlign: 'center' }}>
         <FadeIn>
           <h2 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 'clamp(3rem, 7vw, 6rem)', letterSpacing: '0.08em', color: restaurant.colors.text }}>
             GATAVI <span style={{ color: restaurant.colors.primary }}>BAUDĪT?</span>

@@ -19,12 +19,12 @@ export const restaurant = {
   aboutVideo: '/videos/foodpyramid.mp4',
   cinematicVideo: '/videos/themepartyvideo.mp4',
   colors: {
-    primary: '#6B3A2A',
-    primaryDark: '#4A2418',
-    bg: '#FDFAF5',
-    bgAlt: '#F5EFE4',
-    text: '#2C1810',
-    gray: '#8C7B6B',
+    primary: '#C9A84A',
+    primaryDark: '#9B7E2C',
+    bg: '#0E0B08',
+    bgAlt: '#1A1410',
+    text: '#F5EFE4',
+    gray: '#9B8E7E',
   },
   menu: {
     Mains: [

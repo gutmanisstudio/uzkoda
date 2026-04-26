@@ -23,7 +23,7 @@ export default function Navbar() {
       height: '70px',
       background: 'rgba(44,24,16,0.92)',
       backdropFilter: 'blur(16px)',
-      borderBottom: `1px solid rgba(107,58,42,0.2)`,
+      borderBottom: `1px solid rgba(201,168,74,0.2)`,
     }}>
       <a href="#home" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
         <img src="/images/logo.jpg" alt={restaurant.name} style={{ height: '44px', objectFit: 'contain', borderRadius: '8px' }} onError={e => (e.target as HTMLImageElement).style.display = 'none'} />

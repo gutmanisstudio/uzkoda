@@ -7,22 +7,22 @@ const features = [
   {
     title: 'Signatūras piramīda',
     desc: 'Mūsu vizītkarte — kārtots uzkodu tornis, kas piesaista skatienus un patīk pat izvēlīgākajiem viesiem.',
-    svg: <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6B3A2A" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 22 22 2 22"/></svg>
+    svg: <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C9A84A" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 22 22 2 22"/></svg>
   },
   {
     title: 'Svaigi produkti',
     desc: 'Katra kārta — sezonas un vietējas izejvielas, kārtotas tieši pirms pasniegšanas.',
-    svg: <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6B3A2A" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+    svg: <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C9A84A" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
   },
   {
     title: 'Pielāgots pasākumam',
     desc: 'Izvēlamies sastāvu un izmēru atbilstoši viesu skaitam — no 10 līdz 200+.',
-    svg: <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6B3A2A" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+    svg: <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C9A84A" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
   },
   {
     title: 'Piegādājam un uzstādām',
     desc: 'Atvedam, sakārtojam un nodrošinām, ka piramīda izskatās ideāli visu pasākumu.',
-    svg: <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6B3A2A" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+    svg: <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C9A84A" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
   },
 ]
 
@@ -39,8 +39,8 @@ export default function About() {
             borderRadius: '20px',
             overflow: 'hidden',
             aspectRatio: '4/5',
-            background: restaurant.colors.text,
-            boxShadow: '0 30px 80px rgba(107,58,42,0.15)',
+            background: '#0E0B08',
+            boxShadow: '0 30px 80px rgba(201,168,74,0.15)',
           }}>
             <video
               autoPlay loop muted playsInline
@@ -49,7 +49,7 @@ export default function About() {
               <source src={restaurant.aboutVideo} type="video/mp4" />
             </video>
             <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '4px', background: restaurant.colors.primary, zIndex: 3 }} />
-            <div style={{ position: 'absolute', top: '1.5rem', left: '1.5rem', background: 'rgba(107,58,42,0.9)', backdropFilter: 'blur(8px)', padding: '0.5rem 1rem', borderRadius: '999px', zIndex: 3 }}>
+            <div style={{ position: 'absolute', top: '1.5rem', left: '1.5rem', background: 'rgba(201,168,74,0.9)', backdropFilter: 'blur(8px)', padding: '0.5rem 1rem', borderRadius: '999px', zIndex: 3 }}>
               <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase', color: '#FDFAF5' }}>Mūsu vizītkarte</p>
             </div>
           </div>
@@ -75,7 +75,7 @@ export default function About() {
           {features.map((item, i) => (
             <FadeIn key={item.title} delay={0.2 + i * 0.08}>
               <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start', marginBottom: '1.3rem' }}>
-                <div style={{ width: '32px', height: '32px', borderRadius: '50%', border: '1.5px solid rgba(107,58,42,0.3)', background: 'rgba(107,58,42,0.06)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: '2px' }}>
+                <div style={{ width: '32px', height: '32px', borderRadius: '50%', border: '1.5px solid rgba(201,168,74,0.3)', background: 'rgba(201,168,74,0.06)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: '2px' }}>
                   {item.svg}
                 </div>
                 <div>

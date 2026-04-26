@@ -19,13 +19,13 @@ export default function KidsRoom() {
 
         {/* LEFT — theme party video, same size as previous kids video */}
         <FadeIn direction="left">
-          <div style={{ position: 'relative', borderRadius: '20px', overflow: 'hidden', aspectRatio: '4/5', background: restaurant.colors.text, boxShadow: '0 30px 80px rgba(107,58,42,0.12)' }}>
+          <div style={{ position: 'relative', borderRadius: '20px', overflow: 'hidden', aspectRatio: '4/5', background: '#0E0B08', boxShadow: '0 30px 80px rgba(201,168,74,0.12)' }}>
             <video autoPlay loop muted playsInline style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}>
               <source src="/videos/themepartyvideo.mp4" type="video/mp4" />
             </video>
-            <div style={{ position: 'absolute', inset: 0, background: 'rgba(107,58,42,0.1)' }} />
+            <div style={{ position: 'absolute', inset: 0, background: 'rgba(201,168,74,0.1)' }} />
             <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '4px', background: restaurant.colors.primary }} />
-            <div style={{ position: 'absolute', top: '1.5rem', left: '1.5rem', background: `rgba(107,58,42,0.9)`, backdropFilter: 'blur(8px)', padding: '0.5rem 1rem', borderRadius: '999px', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+            <div style={{ position: 'absolute', top: '1.5rem', left: '1.5rem', background: `rgba(201,168,74,0.9)`, backdropFilter: 'blur(8px)', padding: '0.5rem 1rem', borderRadius: '999px', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
               <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#FDFAF5" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M5.8 11.3L2 22l10.7-3.79"/><path d="M4 3h.01"/><path d="M22 8h.01"/><path d="M15 2h.01"/><path d="M22 20h.01"/><path d="M22 2l-2.24.75a2.9 2.9 0 00-1.96 3.12c.1.86-.57 1.63-1.45 1.63h-.38c-.86 0-1.6.6-1.76 1.44L14 10"/><path d="M22 13l-1.99.25c-.87.1-1.57.74-1.74 1.59l-1.32 6.71c-.21.99-1.31 1.58-2.21 1.16L13 22"/>
               </svg>
@@ -64,7 +64,7 @@ export default function KidsRoom() {
           ].map((item, i) => (
             <FadeIn key={item.title} delay={0.2 + i * 0.08}>
               <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start', marginBottom: '1.3rem' }}>
-                <div style={{ width: '32px', height: '32px', borderRadius: '50%', border: `1.5px solid rgba(107,58,42,0.3)`, background: `rgba(107,58,42,0.06)`, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: '2px' }}>
+                <div style={{ width: '32px', height: '32px', borderRadius: '50%', border: `1.5px solid rgba(201,168,74,0.3)`, background: `rgba(201,168,74,0.06)`, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: '2px' }}>
                   {item.svg}
                 </div>
                 <div>
@@ -91,7 +91,7 @@ export default function KidsRoom() {
         <div style={{ maxWidth: '1200px', margin: '4rem auto 0', display: 'grid', gridTemplateColumns: isMobile ? 'repeat(2, 1fr)' : 'repeat(4, 1fr)', gap: '1rem' }}>
           {galleryImages.map((src, i) => (
             <FadeIn key={src} delay={i * 0.05}>
-              <div style={{ aspectRatio: '1/1', borderRadius: '12px', overflow: 'hidden', background: restaurant.colors.text }}>
+              <div style={{ aspectRatio: '1/1', borderRadius: '12px', overflow: 'hidden', background: '#0E0B08' }}>
                 <img src={src} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s' }}
                   onMouseEnter={e => (e.target as HTMLImageElement).style.transform = 'scale(1.05)'}
                   onMouseLeave={e => (e.target as HTMLImageElement).style.transform = 'scale(1)'} />
